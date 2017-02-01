@@ -1,0 +1,30 @@
+<template name="MainLayout">
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                
+                <!-- Top Menu Items -->
+                {{> Header}}
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                {{> SideNav}}
+                <!-- /.navbar-collapse -->
+            </nav>
+
+            <div id="page-wrapper">
+
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    {{> PageHeading}}
+
+                </div>
+                <!-- /.container-fluid -->
+                {{> Template.dynamic template=main}}
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+</template>
