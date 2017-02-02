@@ -1,0 +1,19 @@
+<template name="Projects">
+	{{#if $.Session.get 'newProject'}}
+		{{> NewProject}}
+	{{else}}
+		<div class="text-right">
+
+			<button class="btn btn-primary new-project">New Project</button>
+		</div>
+	{{/if}}
+	<section class="projects">
+		{{#if Template.subscriptionsReady}}
+			{{#each projects}}
+				{{> Project}}
+			{{/each}}
+		{{else}}
+			<p>Loading...</p>
+		{{/if}}
+	</section>
+</template>

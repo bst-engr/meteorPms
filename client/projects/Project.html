@@ -1,0 +1,24 @@
+<template name="Project">
+	<div class="panel panel-default">
+		<div class="panel-heading clearfix">
+			<h3 class="">{{name}} - {{tasks.length}} Tasks 
+				
+				<i class="fa fa-trash pull-right"></i>
+				{{#if isActive}}
+					<i class="fa fa-close toggle-status pull-right"></i>
+				{{else}}
+					<i class="fa fa-check toggle-status pull-right"></i>
+				{{/if}}
+				<i class="fa fa-pencil pull-right"></i>
+			</h3>
+		</div>
+		<div class="panel-body">
+		{{#if editMode}}
+			{{> quickForm collection="Projects" id=updateProjectId type="update" doc=this autosave=true}}
+		{{else}}
+			<p>{{desc}}</p>
+			<a href="project/{{_id}}">View Details</a>
+		{{/if}}
+		</div>
+	</div>
+</template>

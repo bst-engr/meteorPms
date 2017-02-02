@@ -1,1 +1,5 @@
 /* CSS declarations go here */
+.panel .panel-body { padding: 10px 30px; }
+.fa {cursor: pointer; padding: 1px 5px;}
+section { margin-top: 10px; }
+section.projects h3 { margin-top: 10px; }
