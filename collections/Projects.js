@@ -66,9 +66,9 @@ ProjectSchema = new SimpleSchema ({
 		type: String,
 		label: 'Description'
 	},
-	tasks: {
-		type: [TasksSchema]
-	},
+	// tasks: {
+	// 	type: [TasksSchema]
+	// },
 	isActive:{
 		type: Boolean,
 		defaultValue: true,

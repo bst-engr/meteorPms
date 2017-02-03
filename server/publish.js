@@ -5,4 +5,9 @@ Meteor.publish('projects', function() {
 Meteor.publish('singleProject', function(id) {
 	check(id, String);
 	return Projects.find({_id: id});
-})
+});
+
+Meteor.publish('tasks', function(id) {
+	check(id, String);
+	return Tasks.find({project_id: id});
+});

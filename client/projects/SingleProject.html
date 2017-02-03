@@ -1,13 +1,19 @@
 <template name="SingleProject">
 	<div class="panel panel-default">
 		<div class="panel-heading clearfix">
-			<h3 class="">{{project.name}} - {{project.tasks.length}} Tasks 
+			<h3 class="">{{project.name}} - {{tasks.length}} Tasks 
 			</h3>
 		</div>
 		<div class="panel-body">
 			<p>{{project.desc}}</p>
-			<h3>Project Tasks</h3>
-			{{#each project.tasks}}
+			<h3>Project Tasks 
+				<button class="btn brn-primary pull-right new-task">New Task</button>
+			</h3>
+			{{#if enableNewTaskForm}}
+				{{> NewTask}}
+			{{/if}}
+
+			{{#each tasks}}
 				{{> Tasks}}
 			{{else}}
 				<p>No Task Added Yet</p>
